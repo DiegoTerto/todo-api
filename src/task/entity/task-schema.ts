@@ -7,7 +7,9 @@ const taskSchema = new Schema({
   type: { type: String },
   category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
   status: { type: String },
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+  dueAt: { type: Date }
+
 }, { timestamps: true })
 
 export default model('Task', taskSchema)
